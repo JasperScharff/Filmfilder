@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmzoeker</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+
+    <h1>Winc Filmfinder</h1>
+    <div class="searchbar">
+    <input type="search" id="searchbar"  placeholder="Zoek uw film..." onkeyup="search()"></div>
+        <!-- <legend>Select a maintenance drone:</legend> Een legend is een mooie legenda -->
+        <nav class="menubar">
+        <div>
+          <input type="radio" id="nieuwe-films" name="films" value="nieuwe-films" checked>
+          <label for="nieuwe-films">Nieuwe films</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="avenger" name="films" value="avenger">
+          <label for="avenger">Avenger films</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="x-men" name="films" value="x-men">
+          <label for="x-men">X-Men films</label>
+        </div>
+
+        <div>
+          <input type="radio" id="princess" name="films" value="princess">
+          <label for="princess">Princess films</label>
+        </div>
+
+        <div>
+          <input type="radio" id="batman" name="films" value="batman">
+          <label for="batman">Batman films</label>
+        </div>
+
+
+    </nav>
+
+
+    
+    <main>
+        <ul id="addMoviesToDom"></ul>
+    </main>
+
+
+    <script src="/script.js"></script>
+    <script src="/toegevoegdeFilms.js"></script>
+
+
+</body>
+</html>
