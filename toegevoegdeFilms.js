@@ -1,29 +1,6 @@
-// HTML buttons maken
-// Om gegevens op te roepen gebruik ik getElement
-// gebruik de .map om er door movies te gaan
-// Knoppen moeten iets doen als je er op klikt
-//      addEventListener
-// links toevoegen aan posters
-// Grid maken
-
-// Zoekbalk
-//  Roep de zoekbalk op door getElement
-// 
-// let 
-//
-//
-//
-//
-//
-
-
-
-
-
-
 
 // Functie maken die de films toevoegt aan de HTML
-let toegevoegdAanHTML = (movies) => {
+const toegevoegdAanHTML = (movies) => {
 
     const verwijderdeMovies = document.querySelectorAll('li')
 
@@ -36,9 +13,9 @@ let toegevoegdAanHTML = (movies) => {
         console.log("Dit wordt herhaalt:", movie)
         // Maak een nieuwe HTML element aan en voeg de film toe
         // Roep de addMoviesToDom op door getElement
-        var ul = document.getElementById("addMoviesToDom");
+        const ul = document.getElementById("addMoviesToDom");
         // Maak een nieuwe li aan
-        var li = document.createElement("li");
+        const li = document.createElement("li");
         // Hang de li aan de ul
         ul.appendChild(li);
 
@@ -46,7 +23,7 @@ let toegevoegdAanHTML = (movies) => {
 
         ///////// Link gedeelte begin ////
         // Maak een nieuw a link element aan en noem het linkPoster
-        var linkPoster = document.createElement("a") // Output: <a></a>
+        const linkPoster = document.createElement("a") // Output: <a></a>
 
 
         // Zet er href achter en roep de movie.poster op
@@ -58,13 +35,9 @@ let toegevoegdAanHTML = (movies) => {
         li.appendChild(linkPoster)
 
 
-
-
-
-
         ///////// Image gedeelte begin ////
         // Maak een nieuw img element aan
-        var img = document.createElement("img")
+        const img = document.createElement("img")
 
         // Zet de src van dit element op movie.poster
         img.src = movie.poster;
@@ -72,8 +45,17 @@ let toegevoegdAanHTML = (movies) => {
         // Plak/hang de linkPoster aan de li die we eerder gemaakt hebben
         linkPoster.appendChild(img)
 
+        img.onclick = () => {
+            window.open('https://www.imdb.com/title/' + movie.imdbID , '_blank');
+
+        }
+
     });
 };
+
+// Voeg alle films toe op de startpagina
+toegevoegdAanHTML(movies);
+
 
 
 // Functie die uitgevoerd moet worden bij het klikken op een knop
